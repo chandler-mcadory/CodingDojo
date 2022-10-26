@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    padding: 0 10%;
+}
+
+.flec {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.topbar {
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+.feed {
+    text-align: center;
+    padding: 10px;
+}
+
+.leftbox {
+    border: 3px solid black;
+    padding: 15px;
+    width: 20%;
+}
+
+.circle {
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.right-boxes {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.namebox {
+    display: flex;
+    justify-content: space-between;
+}

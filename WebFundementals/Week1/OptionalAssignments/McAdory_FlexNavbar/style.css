@@ -1,0 +1,43 @@
+* {
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.nav {
+    background-color: rgb(51,51,51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+    height: 70px;
+}
+
+.nav-title {
+}
+
+.nav-links {
+    display: flex; 
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(167,167,167);
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(23,162,184);
+    padding: 7px;
+    box-shadow: 3px 3px black;
+}
