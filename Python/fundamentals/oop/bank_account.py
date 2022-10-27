@@ -13,23 +13,24 @@ class BankAccount:
             self.balance -= amount
         else:
             print("Insufficient funds: Charging a $5 fee")
-            self.balance -= amount
+            self.balance -= 5
         return self
 
     def display_account_info(self):
         print(self.balance)
         return self
 
-    def yield_interest(self, percent):
-        self.balance = self.balance * (1 + percent)
+    def yield_interest(self):
+        if self.balance > 0:
+            self.balance = self.balance * self.int_rate
         return self
 
 
 max = BankAccount(.02, 1000)
 
-max.deposit(50).deposit(250).deposit(200).withdraw(500).yield_interest(.09).display_account_info()
+max.deposit(50).deposit(250).deposit(200).withdraw(500).yield_interest().display_account_info()
 
 
 beltus = BankAccount(.03, 10)
 
-beltus.deposit(50).deposit(250).withdraw(200).withdraw(500).yield_interest(.01).display_account_info()
+beltus.deposit(50).deposit(250).withdraw(200).withdraw(500).yield_interest().display_account_info()
