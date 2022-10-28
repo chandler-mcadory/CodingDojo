@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        body {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .flexit {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .bluebox {
+            background-color: {{color}};
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Welcome!</h2>
+
+    <div class="flexit">
+        {% for x in range(0,times): %}
+            <div class="bluebox"></div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
