@@ -16,12 +16,12 @@
                 <th>Last Name</th>
                 <th>Full Name</th>
             </tr>
-            <tr></tr>
-                {% for x in users %}
-                <td>{{x['first_name']}}</td>
-                <td>{{x['last_name']}}</td>
-                <td>{{x['first_name']}} {{x['last_name']}}</td>
-                </tr>
+            {% for one_user in users %}
+            <tr>
+                <td>{{one_user['first_name']}}</td>
+                <td>{{one_user['last_name']}}</td>
+                <td>{{one_user['first_name']}} {{one_user['last_name']}}</td>
+            </tr>
                 {% endfor %}
         </thead>
     </table>

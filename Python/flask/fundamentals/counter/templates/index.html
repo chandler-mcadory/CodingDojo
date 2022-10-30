@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        *{
+            color: white;
+        }
+
+        body {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        h2, h1 {
+            text-align: center;
+            margin: 20px;
+        }
+
+
+        .flexit {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .adder {
+            background-color: rgb(0, 81, 255);
+            border: 2px solid black;
+            padding: 11px;
+            text-decoration: none;
+        }
+
+        .reset {
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 11px;
+            text-decoration: none;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flexit">
+        <h1>Button Counter</h1>
+        <h1>Visit Counter</h1>
+    </div>
+    <div class="flexit">
+        <h2>{{session['click_count']}}</h2>
+        <h2>{{session['visit_count']}}</h2>
+    </div>
+    <div class="flexit">
+        <a href="/count" class="adder">Count</a>
+        <a href="/reset" class="reset">Reset</a>
+    </div>
+    <form action="/increment" class="increment" method="post">
+        <input type="text" name="increment" placeholder="wutchu addin broh">
+    </form>
+    
+</body>
+</html>
