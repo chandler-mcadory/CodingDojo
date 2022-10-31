@@ -15,7 +15,6 @@ def result():
     session['Star Wars'] = request.form['sw_choice']
     session['Favorite Language'] = request.form['fav_language']
     session['Comments'] = request.form['comment']
-    print(request.form)
     return render_template('/results.html')
 
 
