@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .form {
+            padding: 50px 600px;
+            gap: 10px;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h2>Submitted Info</h2>
+        <table class="table">
+            {% for key, value in session.items() %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/"><button class="btb btn-primary">Go back</button></a>
+    </div>
+</body>
+</html>
