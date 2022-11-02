@@ -1,0 +1,31 @@
+INSERT INTO dojos (name) 
+VALUES('bob'), ('rob'), ('job');
+
+
+SET SQL_SAFE_UPDATES = 0; 
+DELETE FROM dojos WHERE id > 0;
+
+
+INSERT INTO dojos (name) 
+VALUES('glob'), ('hob'), ('knob');
+
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('jim', 'jimson', 31, 4), ('mark', 'markson', 32, 4), ('john', 'johnson', 33, 4);
+
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('james', 'jameson', 31, 5), ('matt', 'mattson', 32, 5), ('bill', 'billson', 33, 5);
+
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('hal', 'halson', 31, 6), ('dick', 'dixon', 32, 6), ('kal', 'kalson', 33, 6);
+
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+
+SELECT dojos.name FROM ninjas 
+JOIN dojos ON dojos.id = ninjas.dojo_id
+ORDER BY ninjas.id DESC LIMIT 1;
