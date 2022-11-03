@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read(All)</title>
+</head>
+<body>
+    <table class="table table-success table-striped-columns">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_user in all_users %}
+            <tr>
+                <td>{{one_user.id}}</td>
+                <td>{{one_user.first_name}}</td>
+                <td>{{one_user.last_name}}</td>
+                <td>{{one_user.email}}</td>
+                <td>{{one_user.created_at}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button><a href="/users/new">Create new user.</a></button>
+</body>
+</html>
