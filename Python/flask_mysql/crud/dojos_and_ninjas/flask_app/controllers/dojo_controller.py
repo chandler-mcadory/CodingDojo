@@ -19,8 +19,8 @@ def create_dojo():
 
 @app.route('/dojos/<int:id>/show')
 def show_dojo(id):
-    the_dojo = []
-    the_dojo.append(Dojo.get_one({'id':id}))
-    print(the_dojo)
+    # the_dojo = []
+    the_dojo = Dojo.get_one({'id':id})
+    # print(the_dojo)
     return render_template('dojo_show.html', the_dojo = the_dojo)
 

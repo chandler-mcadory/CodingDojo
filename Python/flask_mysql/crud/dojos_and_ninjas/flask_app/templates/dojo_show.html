@@ -9,7 +9,7 @@
 <body>
 
     <!-- DISPLAY ALL NINJAS IN A DOJO => TABLE -->
-    <h1>{{the_dojo[0].name}} Ninjas</h1>
+    <h1>{{the_dojo.name}} Ninjas</h1>
     <table>
         <thead>
             <tr>
@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for one_dojo in the_dojo[0].ninjas %}
+            {% for one_dojo in the_dojo.ninjas %}
             <tr>
                 <td>{{one_dojo.first_name}}</td>
                 <td>{{one_dojo.last_name}}</td>
