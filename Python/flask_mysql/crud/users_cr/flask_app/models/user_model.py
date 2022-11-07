@@ -41,7 +41,7 @@ class User:
         VALUES (%(first_name)s, %(last_name)s, %(email)s);
         '''
         return connectToMySQL(DATABASE).query_db(query, data)
-        
+
     @classmethod
     def update(cls, data):
         query = '''

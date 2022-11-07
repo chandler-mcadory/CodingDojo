@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos</title>
+</head>
+<body>
+    <h1>New Dojo</h1>
+
+<!-- NEW DOJO CREATIONS -->
+    <form action="/dojos/create" method="post">
+            <p>Dojo Name:</p>
+                <input type='text' name='name'>
+        <button>Create</button>
+    </form>
+
+<!-- LIST OF ALL DOJOS -->
+    <h1>All Dojos</h1>
+    {% for one_dojo in all_dojos %}
+        <a href="/dojos/{{one_dojo.id}}/show">{{one_dojo.name}}</a>
+    {% endfor %}
+
+<!-- NEW NINJA PAGE REDIRECT -->
+    <a href="/ninjas/new">Add Ninja</a>
+</body>
+</html>

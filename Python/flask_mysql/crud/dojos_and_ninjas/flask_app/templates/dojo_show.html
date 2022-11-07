@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Display</title>
+</head>
+<body>
+
+    <!-- DISPLAY ALL NINJAS IN A DOJO => TABLE -->
+    <h1>{{the_dojo[0].name}} Ninjas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_dojo in the_dojo[0].ninjas %}
+            <tr>
+                <td>{{one_dojo.first_name}}</td>
+                <td>{{one_dojo.last_name}}</td>
+                <td>{{one_dojo.age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <!-- HOME PAGE REDIRECT -->
+    <a href="/dojos">Home</a>
+</body>
+</html>
