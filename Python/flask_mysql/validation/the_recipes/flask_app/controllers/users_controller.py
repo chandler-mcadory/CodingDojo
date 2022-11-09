@@ -2,6 +2,8 @@ from flask_app import app
 from flask import render_template,redirect,request,session,flash
 from flask_bcrypt import Bcrypt
 from flask_app.models.user_model import User
+from flask_app.models.recipe_model import Recipe
+from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
 
@@ -11,6 +13,7 @@ bcrypt = Bcrypt(app)
 def home():
     return render_template('login_registration.html')
 
+# USER REGISTRATION
 @app.route('/users/register', methods = ['POST'])
 def user_reg():
     if not User.validator(request.form):
@@ -24,6 +27,7 @@ def user_reg():
     session['user_id'] = user_id
     return redirect('/dashboard')
 
+# WELCOME TEMPLATE - DASHBOARD
 @app.route('/dashboard')
 def dash():
     if 'user_id' not in session:
@@ -31,14 +35,17 @@ def dash():
     data = {
         'id': session['user_id']
     }
+    all_recipes = Recipe.get_all()
     logged_user = User.get_by_id(data)
-    return render_template('welcome.html', logged_user = logged_user)
+    return render_template('welcome.html', logged_user = logged_user, all_recipes = all_recipes)
 
+# LOGOUT
 @app.route('/users/logout')
 def logout():
     del session['user_id']
     return redirect('/')
 
+# LOGIN
 @app.route('/users/login', methods=['POST'])
 def user_log():
     data = {

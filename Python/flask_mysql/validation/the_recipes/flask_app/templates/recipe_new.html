@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Add a Recipe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+
+        <!--  TOPBAR -->
+            <h1>Add a New Recipe!</h1>
+            <div class="d-flex d-grid gap-3">
+                <a href="/dashboard">back to recipes</a>
+                <a href="/users/logout">Logout</a>
+            </div>
+        </div>
+
+        <!-- FLASH ALERTS LOOP -->
+        {% for message in get_flashed_messages() %}
+        <p class="text-danger">{{ message }}</p>
+        {% endfor %}
+        
+        <!-- RECIPE CREATION FORM -->
+        <form action="/recipes/create" method="post">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <p>Name</p>
+                    <input type="text" name="name">
+                    <p>Description</p>
+                    <textarea name="description" cols="30" rows="3"></textarea>
+                    <p>Instructions</p>
+                    <textarea name="instructions" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <p>Date</p>
+                    <input type="date" name="date">
+                    <div>
+                        <p>Under 30 minutes?</p>
+                        <label for="true">Yes</label>
+                        <input type="radio" name="under_30" value="1">
+                        <label for="false">No</label>
+                        <input type="radio" name="under_30" value="0">
+                    </div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Recipe Posts</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{this_recipe.name}}</h1>
+        <p>Posted by: {{this_recipe.planner.first_name}} {{this_recipe.planner.last_name}}</p>
+        <p>Date: {{this_recipe.date}}</p>
+        <p>Description: {{this_recipe.description}}</p>
+        <p>Instructions: {{this_recipe.instructions}}</p>
+        <p>Under 30 minutes? {% if this_recipe.under_30 == 1 %} True {% else %} False {% endif %}</p>
+        <a href="/dashboard" class="btn btn-primary">Home</a>
+    </div>
+</body>
+</html>

@@ -14,9 +14,13 @@
         <div class="row">
             <div class="col-6">
                 <h3>Register</h3>
+
+                <!-- FLASH ALERTS LOOP -->
                 {% for message in get_flashed_messages(category_filter=['reg']) %}
                 <p class="text-danger">{{message}}</p>
                 {% endfor %}
+
+                <!-- REGISTER FORM -->
                 <form action="/users/register" method="post" class="d-flex flex-column">
                     <div class="mb-3">
                         <label for="first_name">First Name:</label>
@@ -45,9 +49,13 @@
 
             <div class="col-6">
                 <h3>Login</h3>
+
+                <!-- FLASH ALERTS LOOP -->
                 {% for message in get_flashed_messages(category_filter=['log']) %}
                 <p class="text-danger">{{message}}</p>
                 {% endfor %}
+
+                <!-- LOGIN FORM -->
                 <form action="/users/login" method="post" class="d-flex flex-column">
                     <div class="mb-3">
                         <label for="email">Email:</label>

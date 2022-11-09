@@ -10,7 +10,47 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome {{logged_user.first_name}}</h1>
-    <a href="/users/logout">Logout</a>
+    <div class="container">
+
+        <!-- TOPBAR -->
+        <div class="d-flex justify-content-between">
+            <h1>Welcome {{logged_user.first_name}}</h1>
+            <div>
+                <a href="/recipes/new">Add a Recipe</a>
+                <a href="/myrecipes">My Recipes</a>
+                <a href="/users/logout">Logout</a>
+            </div>
+        </div>
+
+        <!-- ALL RECIPES LISTED -->
+        <h4>Your friends posted some recipes!</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Under 30?</th>
+                    <th>Posted By</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for one_recipe in all_recipes %}
+                <tr>
+                    <td>{{one_recipe.name}}</td>
+                    <!-- 30 MINUTE Y/N -->
+                    <td>{% if one_recipe.under_30 == 1 %}Yes {% else %}No {% endif %}</td>
+                    <td>{{one_recipe.planner.first_name}} {{one_recipe.planner.last_name}}</td>
+                    <td>
+                        <a href="/recipes/{{one_recipe.id}}">View Recipe</a>
+                        {% if one_recipe.user_id == session['user_id'] %}
+                        <a href="/recipes/{{one_recipe.id}}/edit">Edit</a>
+                        <a href="/recipes/{{one_recipe.id}}/delete">Delete</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

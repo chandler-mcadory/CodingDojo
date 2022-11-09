@@ -42,6 +42,7 @@ class User:
             return False
         return cls(results[0])
 
+
     @staticmethod
     def validator(data):
         is_valid = True
