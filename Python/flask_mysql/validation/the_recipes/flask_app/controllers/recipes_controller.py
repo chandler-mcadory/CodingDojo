@@ -31,6 +31,12 @@ def show_one_recipe(id):
     this_recipe = Recipe.get_by_id({'id':id})
     return render_template("/recipe_one.html", this_recipe = this_recipe)
 
+@app.route('/my_recipes')
+def show_parties_for_logged_user():
+    if 'user_id' not in session:
+        return redirect('/')
+    logged_user = User.get_by_id({'id':session['user_id']})
+    return render_template('/my_recipes.html', logged_user = logged_user)
 
 # EDIT RECIPE
 @app.route('/recipes/<int:id>/edit')
@@ -62,5 +68,12 @@ def update_recipe(id):
 def delete_recipe(id):
     if 'user_id' not in session:
         return redirect('/')
-    Recipe.delete({'id':id})
+    data = {
+        'id':id
+    }
+    this_recipe = Recipe.get_by_id(data)
+    if not this_recipe.user_id == session['user_id']:
+        flash("Not your pig, not your farm.")
+        return redirect('/dashboard')
+    Recipe.delete(data)
     return redirect('/dashboard')
