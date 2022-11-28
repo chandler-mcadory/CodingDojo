@@ -1,0 +1,15 @@
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\bin\Debug\net7.0\practice.exe
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\bin\Debug\net7.0\practice.deps.json
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\bin\Debug\net7.0\practice.runtimeconfig.json
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\bin\Debug\net7.0\practice.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\bin\Debug\net7.0\practice.pdb
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.csproj.AssemblyReference.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.AssemblyInfoInputs.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.AssemblyInfo.cs
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.csproj.CoreCompileInputs.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\refint\practice.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.pdb
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\practice.genruntimeconfig.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\misc\practice\practice\obj\Debug\net7.0\ref\practice.dll
