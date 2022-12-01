@@ -2,7 +2,7 @@
 {
     public static class Functions
     {        
-        public static bool Pallytown(string word)
+        public static bool Pallys(string word)
         {
             int c = word.Length / 2;
             if (word.Length % 2 == 0)
