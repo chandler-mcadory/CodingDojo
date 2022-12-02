@@ -26,9 +26,18 @@
 
 // List of Flavors
 
-List<string> flavors = new List<string>();
-flavors.Add("Chocolate");
-flavors.Add("Vanilla");
-flavors.Add("Cookie Dough");
-flavors.Add("Cookies and Cream");
-flavors.Add("Fudge Brownie");
+// List<string> flavors = new List<string>();
+// flavors.Add("Chocolate");
+// flavors.Add("Vanilla");
+// flavors.Add("Cookie Dough");
+// flavors.Add("Cookies and Cream");
+// flavors.Add("Fudge Brownie");
+
+// Console.WriteLine(flavors.Count);
+// Console.WriteLine(flavors[2]);
+// flavors.RemoveAt(2);
+// Console.WriteLine(flavors.Count);
+
+
+// User Dicrionary
+
