@@ -10,7 +10,7 @@
 //     Console.WriteLine(numbers[i]);
 // }
 
-// string[] names = new string[] { "Tim", "Martin", "Nikki", "Sara"};
+string[] names = new string[] { "Tim", "Martin", "Nikki", "Sara"};
 // for(int i = 0; i < names.Length; i++)
 // {
 //     Console.WriteLine(names[i]);
@@ -26,12 +26,12 @@
 
 // List of Flavors
 
-// List<string> flavors = new List<string>();
-// flavors.Add("Chocolate");
-// flavors.Add("Vanilla");
-// flavors.Add("Cookie Dough");
-// flavors.Add("Cookies and Cream");
-// flavors.Add("Fudge Brownie");
+List<string> flavors = new List<string>();
+flavors.Add("Chocolate");
+flavors.Add("Vanilla");
+flavors.Add("Cookie Dough");
+flavors.Add("Cookies and Cream");
+flavors.Add("Fudge Brownie");
 
 // Console.WriteLine(flavors.Count);
 // Console.WriteLine(flavors[2]);
@@ -39,5 +39,18 @@
 // Console.WriteLine(flavors.Count);
 
 
-// User Dicrionary
+// User Dictionary
 
+Dictionary<string,string> newPeople = new Dictionary<string,string>();
+Random random = new Random();
+for(int i = 0; i < names.Length; i++)
+{
+    int r = random.Next(flavors.Count);
+    newPeople.Add(names[i], flavors[r]);
+}
+// kvp is convention; stands for key value pair
+foreach(var kvp in newPeople)
+{
+    Console.WriteLine(kvp.Key);
+    Console.WriteLine(kvp.Value);
+}
