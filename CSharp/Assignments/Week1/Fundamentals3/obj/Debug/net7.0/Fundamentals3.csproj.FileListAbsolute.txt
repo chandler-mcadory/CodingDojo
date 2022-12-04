@@ -1,0 +1,5 @@
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\Fundamentals3\obj\Debug\net7.0\Fundamentals3.csproj.AssemblyReference.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\Fundamentals3\obj\Debug\net7.0\Fundamentals3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\Fundamentals3\obj\Debug\net7.0\Fundamentals3.AssemblyInfoInputs.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\Fundamentals3\obj\Debug\net7.0\Fundamentals3.AssemblyInfo.cs
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\Fundamentals3\obj\Debug\net7.0\Fundamentals3.csproj.CoreCompileInputs.cache

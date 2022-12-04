@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\misc\\practice\\practice\\practice.csproj": {}
+    "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\CSharp\\Assignments\\Week1\\Fundamentals3\\Fundamentals3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\misc\\practice\\practice\\practice.csproj": {
+    "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\CSharp\\Assignments\\Week1\\Fundamentals3\\Fundamentals3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\misc\\practice\\practice\\practice.csproj",
-        "projectName": "practice",
-        "projectPath": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\misc\\practice\\practice\\practice.csproj",
+        "projectUniqueName": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\CSharp\\Assignments\\Week1\\Fundamentals3\\Fundamentals3.csproj",
+        "projectName": "Fundamentals3",
+        "projectPath": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\CSharp\\Assignments\\Week1\\Fundamentals3\\Fundamentals3.csproj",
         "packagesPath": "C:\\Users\\chann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\misc\\practice\\practice\\obj\\",
+        "outputPath": "C:\\Users\\chann\\OneDrive\\Documents\\CodingDojo\\CSharp\\Assignments\\Week1\\Fundamentals3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chann\\AppData\\Roaming\\NuGet\\NuGet.Config",

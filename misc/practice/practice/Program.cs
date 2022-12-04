@@ -2,25 +2,16 @@
 
 using practice;
 
-string words = "Hello, World!";
-int x = 5;
-double y = x + 1.0;
-long j = 1234567890123456789;
-decimal z = (decimal)3.123456789;
+var b = new BillingInfo();
+b.BillingStartDate = new DateTime(1996, 03, 22);
+b.BillingFrequencyInMonths = 12;
+var NextBillingDate = b.BillingStartDate;
 
-bool tf = false;
-bool any = true;
-object n = null;      // c# has null values, does not have undefined values
-char c = 'a';         // single quotes are 1 character, double quotes are a string of characters
-char[] word = "new array".ToCharArray();
-int[] numbers = new int[10];   // the array "numbers" has bee created. it is empty with 10 spaces
-                               // new is a BIG keyword; new: create a space in memory for something
+//while(NextBillingDate < DateTime.Now)
+//{
+//    NextBillingDate = NextBillingDate.AddMonths(b.BillingFrequencyInMonths);
+//}
 
+NextBillingDate = new DateTime(NextBillingDate.Year, NextBillingDate.Month, b.BillingStartDate.Day);
+DateTime.Today.AddMonths(b.BillingFrequencyInMonths);
 
-Person p = new Person("Rob", 167);
-Person o = new Person("Chan", 165);
-PersonService service = new PersonService();
-Person older = service.GetHigherAge(p, o);
-
-service.AddPerson(p);
-Person persons = service.GetPersonByName("Rob");
