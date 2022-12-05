@@ -1,0 +1,15 @@
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\bin\Debug\net7.0\GameDeveloper2.exe
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\bin\Debug\net7.0\GameDeveloper2.deps.json
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\bin\Debug\net7.0\GameDeveloper2.runtimeconfig.json
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\bin\Debug\net7.0\GameDeveloper2.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\bin\Debug\net7.0\GameDeveloper2.pdb
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.csproj.AssemblyReference.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.AssemblyInfoInputs.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.AssemblyInfo.cs
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.csproj.CoreCompileInputs.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\refint\GameDeveloper2.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.pdb
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\GameDeveloper2.genruntimeconfig.cache
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week1\GameDeveloper2\obj\Debug\net7.0\ref\GameDeveloper2.dll
