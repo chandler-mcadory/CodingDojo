@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+@model Ninja
+<form asp-action='Create' method='post' class="row justify-content-between">
+    
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <label asp-for='Name'></label>
+        <input asp-for='Name'>
+        <span asp-validation-for = "Name"></span>
+
+
+
+    <label asp-for='Dojo'></label>
+        <select asp-for='Dojo'>
+            <option selected disabled hidden>Select an Option</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Part-Time San Jose">Part-Time San Jose</option>
+            <option value="Remote">Remote</option>
+            <option value="Part-Time Remote">Part-Time Remote</option>
+        </select>
+        <span asp-validation-for = "Dojo"></span>
+
+
+
+    <label asp-for='Language'></label>
+        <select asp-for='Language'>
+            <option selected disabled hidden>Select an Option</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Rust">Rust</option>
+            <option value="C#">C#</option>
+        </select>
+        <span asp-validation-for = "Language"></span>
+
+
+
+    <label asp-for="Comment">Comment (optional):</label>
+        <textarea asp-for="Comment" class="comment-box" rows="3"></textarea>
+
+
+
+    <button class="btb btn-primary">Submit</button>
+</form>

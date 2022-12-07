@@ -6,6 +6,8 @@ namespace DojoSurvey.Controllers;
 
 public class HomeController : Controller
 {
+
+    static Ninja data;
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -13,15 +15,35 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+
+
+    [HttpGet("")]
     public IActionResult Index()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    [HttpPost("ninja/create")]
+    public IActionResult Create(Ninja newNinja)
     {
-        return View();
+        if(ModelState.IsValid)
+        {
+            data = newNinja;
+            return RedirectToAction("Result");
+        } 
+        else
+        {
+            return View("Index");
+        }
     }
+
+    [HttpGet("ninja/result")]
+    public IActionResult Result()
+    {
+        return View("Results", data);
+    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

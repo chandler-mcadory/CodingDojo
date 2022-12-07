@@ -1,0 +1,31 @@
+@model Ninja
+
+<div class="container mt-4">
+    <table class="table">
+        <tr>
+            <th>Name: </th>
+            <th>@Model.Name</th>
+        </tr>
+        <tr>
+            <th>Dojo: </th>
+            <th>@Model.Dojo</th>
+        </tr>
+        <tr>
+            <th>Language: </th>
+            <th>@Model.Language</th>
+        </tr>
+        <tr>
+            <th>Comment: </th>
+            @{
+                if(Model.Comment == null)
+                {
+                    <th>No comment.</th>
+                }
+                else
+                {
+                    <th>@Model.Comment</th>
+                }
+            }
+        </tr>
+    </table>
+</div>
