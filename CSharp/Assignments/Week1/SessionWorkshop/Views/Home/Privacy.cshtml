@@ -3,4 +3,27 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Hello @Context.Session.GetString("Username")</p>
+
+<h2>@Context.Session.GetInt32("MyNumber")</h2>
+
+
+@* MATH BUTTONS *@
+<form action="/adjust/plus1" method="post">
+    <input type="submit" value="+ 1" class="btn btn-primary">
+</form>
+<form action="/adjust/mins1" method="post">
+    <input type="submit" value="- 1" class="btn btn-secondary">
+</form>
+<form action="/adjust/mult2" method="post">
+    <input type="submit" value="x 2" class="btn btn-warning">
+</form>
+<form action="/adjust/plusR" method="post">
+    <input type="submit" value="+ Random" class="btn btn-success">
+</form>
+
+
+@* LOGOUT BUTTON *@
+<form action="/logout" method="post">
+    <input type="submit" value="Logout" class="btn btn-danger">
+</form>
