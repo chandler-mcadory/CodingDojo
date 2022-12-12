@@ -29,3 +29,11 @@ C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicio
 C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\obj\Debug\net7.0\CRUDelicious.pdb
 C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\obj\Debug\net7.0\CRUDelicious.genruntimeconfig.cache
 C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\obj\Debug\net7.0\ref\CRUDelicious.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Humanizer.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week2\CRUDelicious\obj\Debug\net7.0\CRUDelicious.csproj.CopyComplete

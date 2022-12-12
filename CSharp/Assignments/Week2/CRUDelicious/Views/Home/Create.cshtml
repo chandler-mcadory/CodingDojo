@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Create a Dish";
+}
+@model Dish
+
+<div class="text-center">
+
+
+@* THIS IS A TERNARY : IF MODEL IS NULL, "ADD" ELSE, "EDIT" *@
+
+    <h2 class="display-4">@(@Model.DishId == 0 ? "Add" : "Edit") a Dish</h2>
+
+
+    <form asp-action="CreateDish" asp-controller="Home" method="post">
+        <div class="d-none">
+            <label asp-for="DishId"></label>
+            <input asp-for="DishId" class="form-control">
+            <span asp-validation-for="DishId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Chef"></label>
+            <input asp-for="Chef" class="form-control">
+            <span asp-validation-for="Chef" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Tastiness"></label>
+            <select asp-for="Tastiness" class="form-select">
+                @foreach (var x in Enumerable.Range(1, 5))
+                {
+                    <option value="@x">@x</option>
+                }
+            </select>
+            <span asp-validation-for="Tastiness" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Calories"></label>
+            <input asp-for="Calories" class="form-control">
+            <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        @if (@Model.DishId == 0)
+        {
+            <input type="submit" value="Submit" class="btn btn-primary m-3">
+        }
+        else
+        {
+            <input type="submit" value="Update" class="btn btn-primary m-3">
+        }
+    </form>
+</div>
