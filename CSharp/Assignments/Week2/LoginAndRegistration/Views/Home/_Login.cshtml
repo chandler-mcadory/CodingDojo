@@ -1,14 +1,17 @@
-@Model LogUser
+
+
+@model LogUser
 <h2>Login</h2>
         <form asp-action="LoginUser" asp-controller="Home" method="post">
             <div class="mb-3">
-                <label asp-for="LEmail"></label>
+                <label asp-for="LEmail">Email</label>
                 <input asp-for="LEmail" class="form-control">
                 <span asp-validation-for="LEmail" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="LPassword"></label>
+                <label asp-for="LPassword">Password</label>
                 <input asp-for="LPassword" class="form-control">
                 <span asp-validation-for="LPassword" class="text-danger"></span>
             </div>
+            <input type="submit" class="btn btn-primary">
         </form>

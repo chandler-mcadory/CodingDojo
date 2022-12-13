@@ -83,6 +83,13 @@ public class HomeController : Controller
         }
     }
 
+    [HttpPost("users/logout")]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return View("Index");
+    }
+
 
     public IActionResult Privacy()
     {

@@ -11,14 +11,13 @@ builder.Services.AddDbContext<MyContext>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddSession;
+builder.Services.AddSession();
 
 
-// Add services to the container.
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
