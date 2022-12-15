@@ -7,8 +7,10 @@ public class User
     [Key]
     public int UserId {get;set;}
     [Required(ErrorMessage = "First Name Required")]
+    [MinLength(2, ErrorMessage ="First Name must be at least 2 characters")]
     public string FirstName {get;set;}
     [Required(ErrorMessage = "Last Name Required")]
+    [MinLength(2, ErrorMessage ="Last Name must be at least 2 characters")]
     public string LastName {get;set;}
     [Required(ErrorMessage = "Email Required")]
     [EmailAddress]

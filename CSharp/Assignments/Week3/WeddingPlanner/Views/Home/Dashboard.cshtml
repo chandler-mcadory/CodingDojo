@@ -1,0 +1,42 @@
+@model List<Dto>;
+
+<div class="container mt-4">
+    <table class="table">
+        <tr>
+            <th>Wedding of:</th>
+            <th>Date</th>
+            <th>Guest Count</th>
+            <th>Action</th>
+        </tr>
+        @{
+            foreach(Dto x in @Model)
+            {
+                <tr>
+                    <td>
+                        <a href="/weddings/@x.WeddingId">@x.DisplayName</a>
+                    </td>
+                    <td>@x.WeddingDate</td>
+                    <td>@x.GuestList?.Count</td>
+                    <td>
+                        @if (@Context.Session.GetInt32("UserId") == @x.CreatorId)
+                        {
+                            <a href="/wedding/destroy">Delete</a>
+                        }
+                        else
+                        {
+                            @if (x.GuestList?.Contains($"{@Context.Session.GetString("FirstName")} {@Context.Session.GetString("LastName")}") == true)
+                            {
+                                <a href="/guest/remove">Un-RSVP</a>
+                            }
+                            else
+                            {
+                                <a href="/guest/add">RSVP</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        <p>@Context.Session.GetString("debug")</p>
+    </table>
+</div>
