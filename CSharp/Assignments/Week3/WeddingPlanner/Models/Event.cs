@@ -1,6 +1,7 @@
 #pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
 namespace WeddingPlanner.Models;
+// guests
 public class Event
 {
     [Key]

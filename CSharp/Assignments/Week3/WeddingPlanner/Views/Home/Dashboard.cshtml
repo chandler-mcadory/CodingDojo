@@ -20,23 +20,22 @@
                     <td>
                         @if (@Context.Session.GetInt32("UserId") == @x.CreatorId)
                         {
-                            <a href="/wedding/destroy">Delete</a>
+                            <a href="/weddings/@x.WeddingId/destroy">Delete</a>
                         }
                         else
                         {
                             @if (x.GuestList?.Contains($"{@Context.Session.GetString("FirstName")} {@Context.Session.GetString("LastName")}") == true)
                             {
-                                <a href="/guest/remove">Un-RSVP</a>
+                                <a href='/guest/@x.WeddingId/remove/@Context.Session.GetInt32("UserId")'>Un-RSVP</a>
                             }
                             else
                             {
-                                <a href="/guest/add">RSVP</a>
+                                <a href='/guest/@x.WeddingId/add/@Context.Session.GetInt32("UserId")'>RSVP</a>
                             }
                         }
                     </td>
                 </tr>
             }
         }
-        <p>@Context.Session.GetString("debug")</p>
     </table>
 </div>

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WeddingPlanner.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.EntityFrameworkCore;
 
 namespace WeddingPlanner.Controllers;
 
@@ -20,7 +21,11 @@ public class HomeController : Controller
 
     [HttpGet]
     public IActionResult Index()
-    {
+    { // redirects to /dashboard if the user is already logged in
+        if (HttpContext.Session.GetInt32("UserId") != null)
+        {
+            return RedirectToAction("Dashboard");
+        }
         return View();
     }
 
@@ -34,6 +39,8 @@ public class HomeController : Controller
             _context.Add(newUser);
             _context.SaveChanges();
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
+            HttpContext.Session.SetString("FirstName", newUser.FirstName);
+            HttpContext.Session.SetString("LastName", newUser.LastName);
             return RedirectToAction("Dashboard");
         }
         else
@@ -42,15 +49,6 @@ public class HomeController : Controller
         }
     }
 
-    // [HttpGet("success")]
-    // public IActionResult Success()
-    // {
-    //     if(HttpContext.Session.GetInt32("UserId") == null)
-    //     {
-    //         return RedirectToAction("Index");
-    //     }
-    //     return View();
-    // }
 
     [HttpPost("users/login")]
     public IActionResult LoginUser(LogUser loginUser)
@@ -85,12 +83,43 @@ public class HomeController : Controller
         }
     }
 
-    [HttpPost("users/logout")]
+
+    [HttpGet("users/logout")]
     public IActionResult Logout()
     {
         HttpContext.Session.Clear();
-        return View("Index");
+        return RedirectToAction("Index");
     }
+
+
+    [HttpGet("weddings/new")]
+    public IActionResult Create()
+    {
+        return View("Create");
+    }
+
+    [HttpPost("wedding/create")]
+    public IActionResult CreateWedding(Wedding newWedding)
+    {
+        _context.Add(newWedding);
+        _context.SaveChanges();
+        HttpContext.Session.SetInt32("WeddingId", newWedding.WeddingId);
+        return RedirectToAction("Dashboard");
+    }
+
+
+    [HttpGet("weddings/{weddingId}/destroy")]
+    public IActionResult Delete(int weddingId)
+    {
+        var w = _context.Weddings;
+
+        var result = w.First(x => x.WeddingId == weddingId);
+
+        w.Remove(result);
+        _context.SaveChanges();
+        return RedirectToAction("Dashboard");
+    }
+
 
     [SessionCheck]
     [HttpGet("dashboard")]
@@ -101,37 +130,72 @@ public class HomeController : Controller
     }
 
 
-    // ========================= JOINS =========================
-    // [HttpGet(WeddingId)]
-    // public 
-    // {
+    [HttpGet("weddings/{id}")]
+    public IActionResult Show(int id)
+    {
+        var thisWedding = GetOne(id);
+        return View(thisWedding);
+    }
 
-    // }
+
+    [HttpGet("/guest/{weddingId}/remove/{userId}")]
+    public IActionResult RemoveGuest(int weddingId, int userId)
+    {
+        var events = _context.Events;
+        
+        var result = events.Where(e => e.UserId == userId && e.WeddingId == weddingId).Single();
+
+        events.Remove(result);
+        var numChanged = _context.SaveChanges();
+
+        return RedirectToAction("Dashboard");
+    }
+
+
+    [HttpGet("/guest/{weddingId}/add/{userId}")]
+    public IActionResult AddGuest(int weddingId, int userId)
+    {   
+        var events = _context.Events;
+        events.Add(new Event {
+            UserId = userId,
+            WeddingId = weddingId
+        });
+        _context.SaveChanges();
+
+        return RedirectToAction("Dashboard");
+    }
+
+
+    private Dto? GetOne(int eventId)
+    {
+        var events = GetList();
+        var result = events.Where(d => d.WeddingId == eventId).Single();
+        return result;
+    }
 
 
     private List<Dto> GetList()
     {
-        var weddings = _context.Weddings.ToList();
-        var events = _context.Events.ToList();
+        var weddings = _context.Weddings.Include(w => w.EventsCreated).ToList();
         var users = _context.Users.ToList();
 
-        var results = 
-        from w in weddings 
-        join e in events on w.WeddingId equals e.WeddingId
-        join u in users on e.UserId equals u.UserId into JoinedUsers
-        select new Dto
-        {
+        var results = weddings.Select(w => new Dto {
             DisplayName = w.Wedder1 + " & " + w.Wedder2,
             WeddingDate = w.Date,
             CreatorId = w.UserId,
             WeddingId = w.WeddingId,
-            GuestList = JoinedUsers.Select(x => x.FirstName + " " + x.LastName).ToList()
-        };
-
-        HttpContext.Session.SetString("debug", results.First().GuestList[0]);
+            // Address = w.Address,
+            GuestList = users.Join(
+                w.EventsCreated,
+                u => u.UserId,
+                e => e.UserId,
+                (u, e) => u
+            ).Select(u => u.FirstName + " " + u.LastName).ToList()
+        });
 
         return results.ToList();
     }
+
 
     public IActionResult Privacy()
     {
@@ -144,6 +208,7 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
 
     public class SessionCheckAttribute : ActionFilterAttribute
     {

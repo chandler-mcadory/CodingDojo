@@ -1,0 +1,21 @@
+@model Dto;
+
+<h1>@Model?.DisplayName's wedding</h1>
+
+
+@* <h3>At @Model?.Address</h3> *@
+
+<h5>Date: @Model?.WeddingDate.ToString("MMM d, yyyy")</h5>
+
+<h5>Guests:</h5>
+<div class="border">
+
+    <ul>
+    @{
+        foreach(string x in @Model?.GuestList)
+        {
+            <li>@x</li>
+        }
+    }
+    </ul>
+</div>

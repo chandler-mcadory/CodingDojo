@@ -1,0 +1,34 @@
+@model Wedding
+<div class="text-center">
+    <div class="flex-1 m-3">
+        <h2>Plan a Wedding</h2>
+        
+        <form asp-action="CreateWedding" asp-controller="Home" method="post">
+            <div class="mb-3">
+                <label asp-for="Wedder1">Wedder One</label>
+                <input asp-for="Wedder1" class="form-control">
+                <span asp-validation-for="Wedder1" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Wedder2">Wedder Two</label>
+                <input asp-for="Wedder2" class="form-control">
+                <span asp-validation-for="Wedder2" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Date"></label>
+                <input asp-for="Date" class="form-control">
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control">
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <input asp-for="UserId" type="hidden" value='@Context.Session.GetInt32("UserId")'>
+
+            <input type="submit" class="btn btn-primary">
+        </form>
+
+    </div>
+</div>

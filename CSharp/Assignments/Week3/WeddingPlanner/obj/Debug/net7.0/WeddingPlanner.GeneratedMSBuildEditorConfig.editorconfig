@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\chann\OneDrive\Documents\CodingDojo\CSharp\Assignments\Week3\WeddingPlanner
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/chann/OneDrive/Documents/CodingDojo/CSharp/Assignments/Week3/WeddingPlanner/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/chann/OneDrive/Documents/CodingDojo/CSharp/Assignments/Week3/WeddingPlanner/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/chann/OneDrive/Documents/CodingDojo/CSharp/Assignments/Week3/WeddingPlanner/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chann/OneDrive/Documents/CodingDojo/CSharp/Assignments/Week3/WeddingPlanner/Views/Home/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/chann/OneDrive/Documents/CodingDojo/CSharp/Assignments/Week3/WeddingPlanner/Views/Home/_Login.cshtml]
